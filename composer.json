@@ -1,0 +1,41 @@
+{
+    "name": "brokenice/laravel-sqlanywhere",
+    "description": "A Sybase driver based Eloquent model and Query builder for Laravel 4",
+    "keywords": ["laravel","eloquent","sybase","sqlanywhere","database","model"],
+    "authors": [
+        {
+            "name": "Carlos A. Gartner",
+            "homepage": "http://carlosgartner.com.br"
+        }
+    ],
+    "license" : "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.2|^6.0|^7.0|^8.0",
+        "illuminate/database": "^5.2|^6.0|^7.0|^8.0",
+        "cagartner/sql-anywhere-client": "dev-master"
+    },
+    "require-dev": {
+        "mockery/mockery": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brokenice\\LaravelSqlAnywhere\\": "src/"
+        }
+    },
+    "autoload-dev" : {
+        "classmap" : [
+            "tests/Unit"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Brokenice\\LaravelSqlAnywhere\\SQLAnywhereServiceProvider"
+            ]
+        }
+    }
+}
